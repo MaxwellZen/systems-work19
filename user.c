@@ -12,7 +12,7 @@
 int main() {
 	mkfifo("send2child", 0777);
 	mkfifo("send2parent", 0777);
-	int send2child = open("send2child", O_WRONLY | O_APPEND, 0777);
+	int send2child = open("send2child", O_WRONLY, 0777);
 	int send2parent = open("send2parent", O_RDONLY, 0777);
 	while (1) {
 		printf("Enter input: ");
